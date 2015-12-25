@@ -40,3 +40,6 @@
 [submodule "Ruby/Ruby_Final_Project"]
 	path = Ruby/Ruby_Final_Project
 	url = https://github.com/srashidi/Ruby_Final_Project.git
+[submodule "Ruby on Rails/Rails_Tutorial"]
+	path = Ruby on Rails/Rails_Tutorial
+	url = https://github.com/srashidi/Rails_Tutorial.git
