@@ -16,3 +16,27 @@
 [submodule "Web Development 101/git_calisthenitcs"]
 	path = Web Development 101/git_calisthenitcs
 	url = https://github.com/srashidi/git_calisthenitcs.git
+[submodule "Ruby/Files_and_Serialization"]
+	path = Ruby/Files_and_Serialization
+	url = https://github.com/srashidi/Files_and_Serialization.git
+[submodule "Ruby/Ruby_on_the_Web"]
+	path = Ruby/Ruby_on_the_Web
+	url = https://github.com/srashidi/Ruby_on_the_Web.git
+[submodule "Ruby/Recursion"]
+	path = Ruby/Recursion
+	url = https://github.com/srashidi/Recursion.git
+[submodule "Ruby/Data_Structures"]
+	path = Ruby/Data_Structures
+	url = https://github.com/srashidi/Data_Structures.git
+[submodule "Ruby/Object_Oriented_Programming"]
+	path = Ruby/Object_Oriented_Programming
+	url = https://github.com/srashidi/Object_Oriented_Programming.git
+[submodule "Ruby/RSpec_Project"]
+	path = Ruby/RSpec_Project
+	url = https://github.com/srashidi/RSpec_Project.git
+[submodule "Ruby/Ruby_Building_Blocks"]
+	path = Ruby/Ruby_Building_Blocks
+	url = https://github.com/srashidi/Ruby_Building_Blocks.git
+[submodule "Ruby/Ruby_Final_Project"]
+	path = Ruby/Ruby_Final_Project
+	url = https://github.com/srashidi/Ruby_Final_Project.git
