@@ -1,0 +1,18 @@
+[submodule "Web Development 101/google-homepage"]
+	path = Web Development 101/google-homepage
+	url = https://github.com/srashidi/google-homepage.git
+[submodule "Web Development 101/The-Euler-Project"]
+	path = Web Development 101/The-Euler-Project
+	url = https://github.com/srashidi/The-Euler-Project.git
+[submodule "Web Development 101/javascript-jquery-project"]
+	path = Web Development 101/javascript-jquery-project
+	url = https://github.com/srashidi/javascript-jquery-project.git
+[submodule "Web Development 101/Ruby_Project"]
+	path = Web Development 101/Ruby_Project
+	url = https://github.com/srashidi/Ruby_Project.git
+[submodule "Web Development 101/Rails_Project"]
+	path = Web Development 101/Rails_Project
+	url = https://github.com/srashidi/Rails_Project.git
+[submodule "Web Development 101/git_calisthenitcs"]
+	path = Web Development 101/git_calisthenitcs
+	url = https://github.com/srashidi/git_calisthenitcs.git
