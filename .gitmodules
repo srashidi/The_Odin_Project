@@ -43,3 +43,6 @@
 [submodule "Ruby on Rails/Rails_Tutorial"]
 	path = Ruby on Rails/Rails_Tutorial
 	url = https://github.com/srashidi/Rails_Tutorial.git
+[submodule "Ruby on Rails/Web_Refresher"]
+	path = Ruby on Rails/Web_Refresher
+	url = https://github.com/srashidi/Web_Refresher.git
