@@ -46,3 +46,6 @@
 [submodule "Ruby on Rails/Web_Refresher"]
 	path = Ruby on Rails/Web_Refresher
 	url = https://github.com/srashidi/Web_Refresher.git
+[submodule "Ruby on Rails/Basic_Routes_Views_Controllers"]
+	path = Ruby on Rails/Basic_Routes_Views_Controllers
+	url = https://github.com/srashidi/Basic_Routes_Views_Controllers.git
