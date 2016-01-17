@@ -49,3 +49,6 @@
 [submodule "Ruby on Rails/Basic_Routes_Views_Controllers"]
 	path = Ruby on Rails/Basic_Routes_Views_Controllers
 	url = https://github.com/srashidi/Basic_Routes_Views_Controllers.git
+[submodule "Ruby on Rails/Active_Record_Basics"]
+	path = Ruby on Rails/Active_Record_Basics
+	url = https://github.com/srashidi/Active_Record_Basics.git
