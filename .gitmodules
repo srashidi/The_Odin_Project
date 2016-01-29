@@ -52,3 +52,6 @@
 [submodule "Ruby on Rails/Active_Record_Basics"]
 	path = Ruby on Rails/Active_Record_Basics
 	url = https://github.com/srashidi/Active_Record_Basics.git
+[submodule "Ruby on Rails/Forms"]
+	path = Ruby on Rails/Forms
+	url = https://github.com/srashidi/Forms.git
