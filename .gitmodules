@@ -55,3 +55,6 @@
 [submodule "Ruby on Rails/Forms"]
 	path = Ruby on Rails/Forms
 	url = https://github.com/srashidi/Forms.git
+[submodule "Ruby on Rails/Authentication"]
+	path = Ruby on Rails/Authentication
+	url = https://github.com/srashidi/Authentication.git
