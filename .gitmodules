@@ -58,3 +58,6 @@
 [submodule "Ruby on Rails/Authentication"]
 	path = Ruby on Rails/Authentication
 	url = https://github.com/srashidi/Authentication.git
+[submodule "Ruby on Rails/Active_Record_Associations"]
+	path = Ruby on Rails/Active_Record_Associations
+	url = https://github.com/srashidi/Active_Record_Associations.git
