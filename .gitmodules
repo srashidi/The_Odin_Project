@@ -61,3 +61,6 @@
 [submodule "Ruby on Rails/Active_Record_Associations"]
 	path = Ruby on Rails/Active_Record_Associations
 	url = https://github.com/srashidi/Active_Record_Associations.git
+[submodule "Ruby on Rails/Advanced_Forms"]
+	path = Ruby on Rails/Advanced_Forms
+	url = https://github.com/srashidi/Advanced_Forms.git
