@@ -64,3 +64,6 @@
 [submodule "Ruby on Rails/Advanced_Forms"]
 	path = Ruby on Rails/Advanced_Forms
 	url = https://github.com/srashidi/Advanced_Forms.git
+[submodule "Ruby on Rails/APIs"]
+	path = Ruby on Rails/APIs
+	url = https://github.com/srashidi/APIs.git
