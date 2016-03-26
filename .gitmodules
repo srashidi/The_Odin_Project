@@ -67,3 +67,6 @@
 [submodule "Ruby on Rails/APIs"]
 	path = Ruby on Rails/APIs
 	url = https://github.com/srashidi/APIs.git
+[submodule "Ruby on Rails/Rails_Final_Project"]
+	path = Ruby on Rails/Rails_Final_Project
+	url = https://github.com/srashidi/Rails_Final_Project.git
