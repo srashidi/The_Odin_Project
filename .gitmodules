@@ -70,3 +70,9 @@
 [submodule "Ruby on Rails/Rails_Final_Project"]
 	path = Ruby on Rails/Rails_Final_Project
 	url = https://github.com/srashidi/Rails_Final_Project.git
+[submodule "HTML5 and CSS3/--force"]
+	path = HTML5 and CSS3/--force
+	url = https://github.com/srashidi/Embedded_Images.git
+[submodule "HTML5 and CSS3/Embedded_Images"]
+	path = HTML5 and CSS3/Embedded_Images
+	url = https://github.com/srashidi/Embedded_Images.git
