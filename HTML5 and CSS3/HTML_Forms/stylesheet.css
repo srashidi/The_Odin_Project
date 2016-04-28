@@ -1,0 +1,240 @@
+body {
+  font-family: "AvenirNext-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: white;
+  color: #333;
+  font-size: 14px;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+ul {
+	list-style: none;
+}
+
+#wrapper {
+	margin: 0 auto;
+	max-width: 1000px;
+}
+
+#page-body {
+	width: 800px;
+	vertical-align: baseline;
+	margin: auto;
+}
+
+#main-header {
+	height: 100px;
+}
+
+#spacer {
+	height: 10px;
+	padding: 10px;
+}
+
+#logos-and-tabs {
+	position: relative;
+	margin-bottom: 15px;
+	padding-top: 40px;
+	display: inline-block;
+}
+
+#logo {
+	float: left;
+}
+
+a#logo-link {
+	background: none;
+}
+
+#logo-image {
+	background-image: url("https://images.mint.com/web-client/images/logos-retina/mint_logo@2x.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	position: relative;
+	top: 12px;
+	height: 56px;
+	width: 103px;
+}
+
+#tabs {
+	display: inline-block;
+	float: right;
+}
+
+#tabs li {
+	display: inline;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-left: solid 1px lightgray;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#tabs li:nth-child(1) {
+	border: 0;
+}
+
+#tabs a {
+	color: #333;
+	text-decoration: none;
+	font-size: 15px;
+	font-weight: normal;
+}
+
+#tabs a.selected {
+  color: #333;
+  font-family: "AvenirNext-DemiBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#content {
+	min-height: 450px;
+	background-color: white;
+}
+
+#content.page-content {
+	box-shadow: 1px 3px 8px rgba(0,0,0,0.2);
+	height: 100%;
+}
+
+#signup-body {
+	display: block;
+	background-color: white;
+	position: relative;
+	padding: 43px 50px 50px 50px;
+	min-height: 620px;
+	font-size: 14px;
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+
+section {
+	float: left;
+	width: 400px;
+	min-height: 620px;
+	overflow: visible;
+}
+
+.header-container {
+	padding-bottom: 20px;
+}
+
+#signup-header {
+	font-size: 30px;
+	font-weight: 300;
+}
+
+#signup-subheader {
+	font-size: 1.2em;
+	padding-top: 5px;
+	padding-bottom: 20px;
+	color: #666;
+}
+
+form {
+	display: block;
+	margin-top: 0em;
+	padding-top: 27px;
+}
+
+label {
+	display: block;
+	padding-bottom: 6px;
+	margin-bottom: 10px;
+}
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.text-input-container {
+	width: 320px;
+	min-width: 160px;
+	height: 34px;
+	padding-bottom: 25px;
+}
+
+.text-input {
+	box-shadow: none;
+	border-radius: 3px;
+	border: 1px solid #d8d8d8;
+	width: 320px;
+	min-width: 160px;
+	padding-left: 8px;
+	padding-right: 6px;
+	height: 34px;
+}
+
+.text-input-container #password-status {
+	background: url("https://images.mint.com/web-client/images/icons/mint/icon-lock_open-gray2.svg") 0 50%/35px 17px no-repeat;
+	position: absolute;
+	width: 33px;
+	height: 32px;
+	right: 1px;
+	top: 1px;
+	bottom: 1px;
+}
+
+.bottom-spacer {
+	display: block;
+	padding-bottom: 30px;
+}
+
+input[type="checkbox"]#signup-remember-input {
+	border-radius: 3px;
+	background: #fff;
+	cursor: pointer;
+	width: 21px;
+	height: 15px;
+	top: 0;
+	left: 0;
+}
+
+#remember-label {
+	display: inline;
+}
+
+#sign-up-submit-btn {
+	text-transform: uppercase;
+	border: none;
+	cursor: pointer;
+	-webkit-appearance: button;
+	border-radius: 2px;
+	color: #fff;
+	font-size: 1.125em;
+	font-weight: 400;
+	line-height: 1.3em;
+	padding: 0 20px;
+	height: 34px;
+	margin: 0;
+	box-sizing: border-box;
+	outline: 0;
+	background: #45cae6;
+	font-family: "AvenirNext-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	display: inline-block;
+	white-space: nowrap;
+	text-align: center;
+	text-decoration: none;
+	min-width: 85px;
+	transition: all 0.1s ease-out;
+}
+
+#terms-of-use-footer {
+	padding-top: 30px;
+}
+
+#terms-of-use {
+	font-family: "AvenirNext-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	color: #7d7f80;
+	line-height: 1.5;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+.terms-of-use-link {
+	color: #45cae6;
+	cursor: pointer;
+	text-decoration: none;
+}
