@@ -153,6 +153,7 @@ fieldset {
 	min-width: 160px;
 	height: 34px;
 	padding-bottom: 25px;
+	position: relative;
 }
 
 .text-input {
@@ -171,9 +172,8 @@ fieldset {
 	position: absolute;
 	width: 33px;
 	height: 32px;
-	right: 1px;
-	top: 1px;
-	bottom: 1px;
+	right: -15px;
+	top: 2px;
 }
 
 .bottom-spacer {
