@@ -18,10 +18,9 @@ function Book(title, author, numPages, hasRead) {
   this.id = crypto.randomUUID();
 }
 
-function addBookToLibrary(title, author, numPages, hasRead) {
-  const book = new Book(title, author, numPages, hasRead);
-  myLibrary.push(book);
-}
+Book.prototype.toggleHasRead = function () {
+  this.hasRead = !this.hasRead;
+};
 
 const dialog = document.querySelector("dialog");
 const showButton = document.querySelector("dialog + button");
@@ -39,16 +38,77 @@ closeButton.addEventListener("click", () => {
   dialog.close();
 });
 
+addBookForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const formData = new FormData(addBookForm);
+
+  const title = formData.get("title");
+  const author = formData.get("author");
+  let numPages = formData.get("numPages");
+  let hasRead = formData.get("hasRead");
+
+  if (title && author && numPages && hasRead !== null) {
+    numPages = parseInt(numPages);
+    hasRead = hasRead === "yes";
+    addBookToLibrary(title, author, numPages, hasRead);
+    const tbodyElement = document.getElementById("book-list");
+    addBookToTable(tbodyElement, myLibrary.at(-1).id, title, author, numPages, hasRead);
+    addBookForm.reset();
+    dialog.close();
+  }
+});
+
+function addBookToLibrary(title, author, numPages, hasRead) {
+  const book = new Book(title, author, numPages, hasRead);
+  myLibrary.push(book);
+}
+
 function addBookToTable(tbodyElement, id, title, author, numPages, hasRead) {
   const trElement = document.createElement("tr");
   trElement.id = id;
 
   [title, author, numPages, hasRead].forEach(value => {
-    tdElement = document.createElement("td");
+    let tdElement = document.createElement("td");
     tdElement.textContent = value;
     trElement.appendChild(tdElement);
   });
+
+  const removeButton = document.createElement("td");
+  removeButton.textContent = "🗑";
+  removeButton.classList.add("remove-button");
+  removeButton.setAttribute("title", "Remove book");
+  removeButton.addEventListener("click", () => {
+    removeBookFromTable(id);
+    const bookIndex = myLibrary.findIndex(book => book.id === id);
+    if (bookIndex !== -1) {
+      myLibrary.splice(bookIndex, 1);
+    }
+  });
+  trElement.appendChild(removeButton);
+
+  const toggleReadButton = document.createElement("td");
+  toggleReadButton.textContent = hasRead ? "📖" : "📘";
+  toggleReadButton.classList.add("toggle-read-button");
+  toggleReadButton.setAttribute("title", hasRead ? "Mark as unread" : "Mark as read");
+  toggleReadButton.addEventListener("click", () => {
+    const book = myLibrary.find(book => book.id === id);
+    if (book) {
+      book.toggleHasRead();
+      toggleReadButton.textContent = book.hasRead ? "📖" : "📘";
+      toggleReadButton.setAttribute("title", book.hasRead ? "Mark as unread" : "Mark as read");
+      trElement.children[3].textContent = book.hasRead;
+    }
+  });
+  trElement.appendChild(toggleReadButton);
+
   tbodyElement.appendChild(trElement);
+}
+
+function removeBookFromTable(id) {
+  const trElement = document.getElementById(id);
+  if (trElement) {
+    trElement.remove();
+  }
 }
 
 addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, true);
@@ -57,31 +117,8 @@ addBookToLibrary("To Kill a Mockingbird", "Harper Lee", 281, true);
 addBookToLibrary("The Great Gatsby", "F. Scott Fitzgerald", 180, false);
 addBookToLibrary("Brave New World", "Aldous Huxley", 311, true);
 
-
 const tbodyElement = document.getElementById("book-list");
 
 myLibrary.forEach(book => {
   addBookToTable(tbodyElement, book.id, book.title, book.author, book.numPages, book.hasRead);
-});
-
-addBookForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const formData = new FormData(addBookForm);
-
-  for (const pair of formData.entries()) {
-    if (typeof window !== 'undefined') {
-      window[pair[0]] = pair[1];
-    }
-    // For Node.js environments
-    // else if (typeof global !== 'undefined') {
-    //   global[pair[0]] = pair[1];
-    // }
-  }
-
-  console.log(title, author, parseInt(numPages), hasRead ? true : false);
-  addBookToLibrary(title, author, parseInt(numPages), hasRead ? true : false);
-  const tbodyElement = document.getElementById("book-list");
-  addBookToTable(tbodyElement, myLibrary.at(-1).id, title, author, numPages, hasRead);
-  addBookForm.reset();
-  dialog.close();
 });
