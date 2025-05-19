@@ -10,17 +10,19 @@
 
 const myLibrary = [];
 
-function Book(title, author, numPages, hasRead) {
-  this.title = title;
-  this.author = author;
-  this.numPages = numPages;
-  this.hasRead = hasRead;
-  this.id = crypto.randomUUID();
-}
+class Book {
+  constructor(title, author, numPages, hasRead) {
+    this.title = title;
+    this.author = author;
+    this.numPages = numPages;
+    this.hasRead = hasRead;
+    this.id = crypto.randomUUID();
+  }
 
-Book.prototype.toggleHasRead = function () {
-  this.hasRead = !this.hasRead;
-};
+  toggleHasRead() {
+    this.hasRead = !this.hasRead;
+  }
+}
 
 const dialog = document.querySelector("dialog");
 const showButton = document.querySelector("dialog + button");
@@ -47,7 +49,7 @@ addBookForm.addEventListener("submit", (e) => {
   let numPages = formData.get("numPages");
   let hasRead = formData.get("hasRead");
 
-  if (title && author && numPages && hasRead !== null) {
+  if (title && author && typeof numPages === 'string' && hasRead !== null) {
     numPages = parseInt(numPages);
     hasRead = hasRead === "yes";
     addBookToLibrary(title, author, numPages, hasRead);
