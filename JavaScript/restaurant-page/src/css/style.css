@@ -11,10 +11,26 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+:root {
+  --primary: #ff7043;
+  --secondary: #ffd54f;
+  --accent: #29b6f6;
+  --bg: #f5f5f5;
+  --text: #222;
+}
+
 html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 /*
@@ -246,27 +262,90 @@ textarea {
 }
 
 header {
-  text-align: center;
+  background: var(--primary);
+  color: #fff;
+  padding: 2rem 0 1rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-radius: 0 0 24px 24px;
+  margin-bottom: 2rem;
 
   nav {
     display: flex;
     justify-content: center;
-    align-content: center;
+    gap: 2rem;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: var(--secondary);
+    }
   }
 }
 
+h1, h2, h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
 button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(41,182,246,0.15);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
   margin: 20px;
 }
 
+button:hover {
+  background: var(--primary);
+  transform: translateY(-2px) scale(1.04);
+}
+
 div#content {
-  /*text-align: center;*/
+  max-width: 700px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  padding: 2rem 2.5rem;
+  text-align: center;
 }
 
-img#food-image {
-  width: 50vh;
-}
-
+img#food-image,
 img#family-owned-image {
   width: 50vh;
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(255,112,67,0.10);
+  margin: 2rem 0;
+  transition: transform 0.2s;
+}
+
+img#food-image:hover,
+img#family-owned-image:hover {
+  transform: scale(1.03) rotate(-2deg);
+  box-shadow: 0 8px 32px rgba(255,112,67,0.18);
+}
+
+p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
